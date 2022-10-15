@@ -98,7 +98,7 @@
   font-size: 100px;
   font-weight: 600;
   margin-left: -0.1875em;
-  color: #2a74a9;
+  color: #A83D3B;
 }
 .home .home-content .text3 {
   font-size: 50px;
@@ -106,19 +106,19 @@
   text-shadow: 2px 2px 3px #0000006e;
 }
 .home .home-content .text3 span {
-  color: #2a74a9;
+  color: #A83D3B;
   font-weight: 800;
   text-shadow: none;
 }
 .home .home-content a {
   display: inline-block;
-  background: #2a74a9;
+  background: #A83D3B;
   color: #f2f2f2;
   font-size: 30px;
   padding: 16px 30px;
   margin-top: 1.25em;
   border-radius: 0.375em;
-  border: 0.125em solid #2a74a9;
+  border: 0.125em solid #A83D3B;
 }
 .home .home-content a:hover {
   color: #2a74a9;
@@ -130,6 +130,39 @@
   font-size: 1.4375em;
   cursor: pointer;
   display: none;
+}
+
+.scroll-up-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  background: green;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 5;
+  font-size: 30px;
+  border-radius: 45px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-up-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Todos so códigos similares - All similar codes */
@@ -190,7 +223,7 @@ section .title::after {
   content: "Quem sou eu";
 }
 .about #clinica::after {
-  content: "Maria Renata Reis";
+  content: "Terapêutico";
 }
 .about .about-content .left {
   width: 45%;
@@ -213,20 +246,21 @@ section .title::after {
 }
 .about .about-content .right a {
   display: inline-block;
-  background: #2a74a9;
+  background: #A83D3B;
   color: #fff;
   font-size: 30px;
   font-weight: 500;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #2a74a9;
+  border: 2px solid #A83D3B;
   transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
   color: #2a74a9;
   background: none;
 }
+
 .about .about-content .left img {
   width: 400px;
   height: 600px;
@@ -235,18 +269,18 @@ section .title::after {
   border-radius: 6px;
   border: 1px dashed #fab3a0;
 }
+
 .about .about-content .left img.clinica {
   width: 500px;
   height: 350px;
   object-fit: cover;
   padding: 5px;
   border-radius: 6px;
-  border: 1px dashed #fab3a0;
+  border: 1px dashed #2a74a9;
 }
 
 .map {
   display: flex;
-
   margin-top: 20px;
 }
 
@@ -270,12 +304,13 @@ section .title::after {
   background: #2a74a9;
   color: #fff;
   font-weight: 600;
-  content: "Que ofereço";
+  content: "Clínicos";
+  text-shadow: 2px 2px 3px #0000006e;
 }
 .services .services-content .card {
   width: calc(33% - 10%);
   background: #0d2333;
-  color: #f3d3d3;
+  color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
@@ -294,7 +329,7 @@ section .title::after {
 .services .services-content .card ion-icon,
 .services .services-content .card i {
   font-size: 50px;
-  color: #fab3a0;
+  color: #fff;
   transition: all 0.3s ease;
 }
 .services .services-content .card:hover ion-icon,
@@ -306,23 +341,35 @@ section .title::after {
   font-weight: 500;
   margin: 10 0 7px 0;
   font-family: "Ubuntu";
-  color: #fab3a0;
+  color: #fff;
 }
 .services .services-content .card:hover .text {
   color: white;
 }
 .services .services-content .card p {
   font-family: "Ubuntu";
-  color: #fab3a0;
+  color: #fff;
 }
 .services .services-content .card:hover p {
   color: #fff;
 }
 
+.disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.disclaimer ion-icon {
+    font-size: 30px;
+}
+
 /* Sessão/Section: Projetos/Projects */
 
 .projects .title::after {
-  content: "para procurar terapia";
+  content: "para fazer terapia";
   background-color: #2a74a9;
   color: #fff;
 }
@@ -361,6 +408,11 @@ section .title::after {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+}
+
+.projects .carousel a {
+  text-decoration: none;
+  color: #f3d3d3;
 }
 
 .projects .carousel .card:hover .box {
@@ -413,6 +465,11 @@ section .title::after {
 .contact .contact-content .left .icons {
   margin: 10px 0;
 }
+
+.contact .contact-content .right {
+  display: flex;
+  flex-direction: column;
+}
 .contact .contact-content .row {
   display: flex;
   height: 65px;
@@ -437,8 +494,7 @@ section .title::after {
 
 .contact .right .redes-sociais {
   display: flex;
-  gap: 20px;
-  height: 300px;
+  justify-content: space-around;
   align-items: flex-start;
   color: #2a74a9;
 }
@@ -455,7 +511,6 @@ section .title::after {
   text-decoration: none;
   color: #2a74a9;
 }
-
 
 /* Section/Sessão: Footer */
 footer {
@@ -521,7 +576,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: #fab3a0;
+    background: #2a74a9;
     padding-top: 80px;
     text-align: center;
     transition: all 0.3s ease;
@@ -604,6 +659,35 @@ footer span a:hover {
     flex-direction: column;
     width: 100%;
   }
+
+  .about .title::after {
+    font-size: 18px;
+  }
+  .services .title::after {
+    font-size: 18px;
+  }
+  .skills .title::after {
+    font-size: 18px;
+  }
+  .projects .title::after {
+    font-size: 16px;
+  }
+  .contact .title::after {
+    font-size: 18px;
+  }
+
+  .redes-sociais {
+    display: flex;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+
+  .about .about-content .left img.clinica {
+    width: 400px;
+    height: 180px;
+  }
 }
 @media (max-width: 400px) {
   .about .title::after {
@@ -620,5 +704,10 @@ footer span a:hover {
   }
   .contact .title::after {
     font-size: 18px;
+  }
+
+  .about .about-content .left img.clinica {
+    width: 400px;
+    height: 180px;
   }
 }
